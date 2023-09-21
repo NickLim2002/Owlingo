@@ -126,7 +126,7 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="55dp"
         app:layout_constraintStart_toEndOf="@+id/linearLayout3"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
         app:srcCompat="@drawable/paypal" />
@@ -135,16 +135,16 @@
         android:id="@+id/imageView6"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="38dp"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
         app:srcCompat="@drawable/visa" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="82dp"
-        android:layout_height="86dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="38dp"
         app:layout_constraintStart_toStartOf="@+id/imageView6"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
         app:srcCompat="@drawable/tng" />

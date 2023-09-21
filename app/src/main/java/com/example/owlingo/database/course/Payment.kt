@@ -1,15 +1,15 @@
-package com.example.owlingo.database.course
+package com.example.owlingo.database.payment
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.time.LocalDateTime
 
-@Entity(tableName = "course")
-data class Course(
+@Entity(tableName = "payment")
+data class Payment(
 
     @PrimaryKey(autoGenerate = true)
-    var courseId: Long = 0L,
+    var paymentId: Long = 0L,
 
 
 
