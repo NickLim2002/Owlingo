@@ -1,9 +1,10 @@
 
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
+    id("kotlin-android")
+    id("org.jetbrains.kotlin.kapt")
+    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -44,8 +45,19 @@ android {
 
 dependencies {
 
-    implementation ("androidx.room:room-runtime:2.5.2")
-    annotationProcessor ("androidx.room:room-compiler:2.5.2")
+    implementation("androidx.room:room-runtime:2.4.3")
+    kapt("androidx.room:room-compiler:2.4.3")
+    implementation("androidx.room:room-ktx:2.4.3")
+
+    implementation ("com.android.volley:volley:1.2.1")
+
+    // Coroutines
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    testImplementation("androidx.room:room-testing:2.4.3")
+    implementation ("androidx.lifecycle:lifecycle-extensions:2.2.0")
+
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
