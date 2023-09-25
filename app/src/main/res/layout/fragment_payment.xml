@@ -15,6 +15,7 @@
         app:title="Course Title"
         app:titleCentered="true" />
 
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="96dp"
@@ -61,7 +62,6 @@
             android:id="@+id/dm_tv3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  23hrs 12mins"
             android:textSize="8sp" />
 
         <TextView

@@ -22,7 +22,7 @@
             android:layout_height="?attr/actionBarSize"
             app:layout_constraintTop_toTopOf="parent"
             app:menu="@menu/top_bar_menu"
-            app:title="@string/title_community"
+            app:title="@string/title_addcourse"
             app:titleCentered="true" />
 
         <TextView
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="@string/question"
+            android:text="Course Name"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.081"
@@ -38,21 +38,11 @@
             app:layout_constraintTop_toBottomOf="@+id/topAppBar" />
 
         <TextView
-            android:id="@+id/fieldLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:text="@string/question"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/et_ln"
-            app:layout_constraintTop_toBottomOf="@+id/et_ln" />
-
-        <TextView
             android:id="@+id/tv_ln"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:text="Expalain of Your Question"
+            android:layout_marginTop="32dp"
+            android:text="Lecture Name"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/et_cn"
             app:layout_constraintTop_toBottomOf="@+id/et_cn" />
@@ -64,10 +54,10 @@
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:ems="10"
+            android:hint="Enter course name"
             android:inputType="text"
             android:lines="3"
             android:maxLines="3"
-            android:text="Ask Your Question"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_cn"
@@ -78,36 +68,78 @@
             android:layout_width="350dp"
             android:layout_height="60dp"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="16dp"
             android:ems="10"
+            android:hint="Enter lecture name"
             android:inputType="text"
             android:lines="10"
             android:maxLines="10"
-            android:text="Explaination"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_ln"
             app:layout_constraintTop_toBottomOf="@+id/tv_ln" />
 
-        <Spinner
-            android:id="@+id/spinner2"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
-            app:layout_constraintStart_toStartOf="@+id/fieldLabel"
-            app:layout_constraintTop_toBottomOf="@+id/fieldLabel" />
+            android:layout_marginTop="32dp"
+            android:text="Description"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/et_ln"
+            app:layout_constraintTop_toBottomOf="@+id/et_ln" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Price"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/et_des"
+            app:layout_constraintTop_toBottomOf="@+id/et_des" />
+
+        <EditText
+            android:id="@+id/et_des"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="Enter description"
+            android:inputType="text"
+            android:lines="3"
+            android:maxLines="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_des" />
+
+        <EditText
+            android:id="@+id/et_price"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="Enter price"
+            android:inputType="text"
+            android:lines="10"
+            android:maxLines="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price" />
 
         <Button
             android:id="@+id/btnCreate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:text="Save"
+            android:text="Create"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+            app:layout_constraintTop_toBottomOf="@+id/et_price" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

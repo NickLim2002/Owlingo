@@ -29,8 +29,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="113dp"
+        android:layout_width="378dp"
+        android:layout_height="103dp"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
@@ -59,7 +59,7 @@
         android:layout_width="82dp"
         android:layout_height="78dp"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
-        app:layout_constraintBottom_toTopOf="@+id/btn_schedule"
+        app:layout_constraintBottom_toTopOf="@+id/tv_schedule"
         app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
@@ -69,7 +69,7 @@
         android:layout_width="243dp"
         android:layout_height="57dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btn_schedule"
+        app:layout_constraintBottom_toTopOf="@+id/tv_schedule"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/videoView"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
@@ -91,28 +91,28 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_schedule"
-        android:layout_width="wrap_content"
-        android:layout_height="49dp"
-        android:backgroundTint="#4E82BF"
-        android:text="Check Schedule"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="560dp" />
-
-    <Button
         android:id="@+id/btn_unlock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="56dp"
         android:backgroundTint="#4E83C0"
         android:text="Unlock Class Now"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schedule will show here"
+        app:layout_constraintBottom_toTopOf="@+id/btn_unlock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_schedule" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.775" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
