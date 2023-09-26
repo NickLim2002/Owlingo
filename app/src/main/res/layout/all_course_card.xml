@@ -7,27 +7,27 @@
 
     <data>
         <variable
-            name="question"
-            type="com.example.owlingo.database.community.Question" />
+            name="course"
+            type="com.example.owlingo.database.course.Course" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="210dp"
+        android:layout_height="110dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="10dp"
         app:checkedIconTint="#00FFFFFF">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="407dp"
-            android:layout_height="195dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:clickable="true">
 
             <ImageView
                 android:id="@+id/img_java"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="88dp"
+                android:layout_height="83dp"
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
                 android:background="#FAED76"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -39,10 +39,10 @@
                 android:id="@+id/tv1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="40dp"
-                android:text="Java Script"
-                android:textSize="16sp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="25dp"
+                android:text=" Programming Language"
+                android:textSize="11sp"
                 app:layout_constraintStart_toEndOf="@+id/img_java"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,10 +50,11 @@
                 android:id="@+id/tv2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:text=" Java Script"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tv1"
                 app:layout_constraintTop_toBottomOf="@+id/tv1"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.117" />
 
             <TextView
                 android:id="@+id/pg_empty"
@@ -62,69 +63,14 @@
 
             <Button
                 android:id="@+id/delBtn"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="44dp"
-                android:backgroundTint="#00FFFFFF"
                 android:clickable="true"
-                android:outlineAmbientShadowColor="#00FFFFFF"
-                android:outlineSpotShadowColor="#00FFFFFF"
                 android:src="@drawable/car_ui_icon_add"
-                app:icon="@drawable/car_ui_icon_delete"
-                app:iconGravity="end"
-                app:iconSize="35dp"
-                app:iconTint="#FF0000"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.992"
-                app:strokeColor="#00FFFFFF" />
-
-            <Button
-                android:id="@+id/delBtn2"
-                android:layout_width="78dp"
-                android:layout_height="54dp"
-                android:backgroundTint="#00FFFFFF"
-                android:clickable="true"
-                android:outlineAmbientShadowColor="#00FFFFFF"
-                android:outlineSpotShadowColor="#00FFFFFF"
-                android:src="@drawable/car_ui_icon_add"
-                app:icon="@drawable/car_ui_icon_edit"
-                app:iconGravity="end"
-                app:iconSize="35dp"
-                app:iconTint="#0411FF"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/delBtn"
-                app:layout_constraintHorizontal_bias="0.589"
-                app:layout_constraintStart_toEndOf="@+id/tv2"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.985"
-                app:strokeColor="#00FFFFFF" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" by KongLongKangLang"
-                android:textSize="10sp"
-                tools:layout_editor_absoluteX="144dp"
-                tools:layout_editor_absoluteY="63dp" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="RM 188"
-                tools:layout_editor_absoluteX="144dp"
-                tools:layout_editor_absoluteY="139dp" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="HelloWorld"
-                tools:layout_editor_absoluteX="144dp"
-                tools:layout_editor_absoluteY="100dp" />
+                app:layout_constraintHorizontal_bias="0.898"
+                app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

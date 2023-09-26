@@ -6,8 +6,8 @@
 
     <data>
         <variable
-            name="questionViewModel"
-            type="com.example.owlingo.ui.community.QuestionViewModel" />
+            name="AdminAddCourseViewModel"
+            type="com.example.owlingo.ui.course.AdminAddCourseViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
