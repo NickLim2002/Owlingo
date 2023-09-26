@@ -9,8 +9,12 @@ import java.time.LocalDateTime
 data class Course(
 
     @PrimaryKey(autoGenerate = true)
-    var courseId: Long = 0L,
-
+    val course_id: Int=0,
+    val course_name: String="",
+    var course_detail: String="",
+    var course_lecture: String="",
+    var course_fee: Int=0,
+    val couse_schedule: String="",
 
 
     )

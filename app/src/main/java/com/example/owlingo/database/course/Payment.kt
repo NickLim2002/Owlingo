@@ -9,8 +9,11 @@ import java.time.LocalDateTime
 data class Payment(
 
     @PrimaryKey(autoGenerate = true)
-    var paymentId: Long = 0L,
+    val payment_id: Int=0,
+    val user_id: Int=0,
+    val amount: String="",
+    val payment_DateTime: String="",
+    val payment_method: String="",
 
 
-
-    )
+)

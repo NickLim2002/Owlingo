@@ -51,7 +51,7 @@ class CourseAdapter(
 
 class CourseDiffCallback : DiffUtil.ItemCallback<Course>() {
     override fun areItemsTheSame(oldItem: Course, newItem: Course): Boolean {
-        return oldItem.courseId == newItem.courseId
+        return oldItem.course_id == newItem.course_id
     }
 
     override fun areContentsTheSame(oldItem: Course, newItem: Course): Boolean {
