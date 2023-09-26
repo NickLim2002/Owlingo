@@ -14,13 +14,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.owlingo.R
-import com.example.owlingo.databinding.FragmentCreateQuestionBinding
+import com.example.owlingo.databinding.FragmentCreateCommentBinding
 import com.google.android.material.appbar.MaterialToolbar
 
-class CreateQuestionFragment : Fragment() {
+class CreateCommentFragment : Fragment() {
 
-    private lateinit var viewModel: CreateQuestionViewModel
-    private lateinit var viewModelFactory: CreateQuestionFactory
+    private lateinit var viewModel: CreateCommentViewModel
+    private lateinit var viewModelFactory: CreateCommentFactory
     private lateinit var navController: NavController
 
     @SuppressLint("ServiceCast")
@@ -30,18 +30,22 @@ class CreateQuestionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val binding: FragmentCreateQuestionBinding = DataBindingUtil.inflate(
+        val binding: FragmentCreateCommentBinding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_create_question,
+            R.layout.fragment_create_comment,
             container,
             false
         )
         val application = requireNotNull(this.activity).application
-        viewModelFactory = CreateQuestionFactory(
-            CreateQuestionFragmentArgs.fromBundle(requireArguments()).userId, application)
+
+        viewModelFactory = CreateCommentFactory(
+            CreateCommentFragmentArgs.fromBundle(requireArguments()).userId,
+            CreateCommentFragmentArgs.fromBundle(requireArguments()).questionId,
+        application)
+
         viewModel = ViewModelProvider(this, viewModelFactory)
-            .get(CreateQuestionViewModel::class.java)
-        binding.createQuestionViewModel = viewModel
+            .get(CreateCommentViewModel::class.java)
+        binding.createCommentViewModel = viewModel
 
         viewModel.getToastMessage().observe(viewLifecycleOwner) { message ->
             if (message != null) {
@@ -51,10 +55,11 @@ class CreateQuestionFragment : Fragment() {
         }
 
         binding.btnSave.setOnClickListener {
-            val questionTitle = binding.questionTV.text.toString()
-            val questionText = binding.questionExplainTV.text.toString()
-            viewModel.updateQuestionDetail(questionTitle, questionText)
-            val action = CreateQuestionFragmentDirections.actionNavigationCommunity()
+            val commentTitle = binding.answerTV.text.toString()
+            val commentText = binding.commentExplainTV.text.toString()
+            viewModel.updateCommentDetail(commentTitle, commentText)
+            val action = CreateCommentFragmentDirections.actionNavigationViewQuestion()
+            action.questionId = CreateCommentFragmentArgs.fromBundle(requireArguments()).questionId
             NavHostFragment.findNavController(this).navigate(action)
         }
 
