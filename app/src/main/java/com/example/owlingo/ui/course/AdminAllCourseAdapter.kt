@@ -1,19 +1,23 @@
 package com.example.owlingo.ui.course
 
+import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.owlingo.R
 import com.example.owlingo.component.ClickListener
-import com.example.owlingo.database.community.Question
+import com.example.owlingo.database.community.Comment
 import com.example.owlingo.database.course.Course
 import com.example.owlingo.databinding.AllCourseCardBinding
-import com.example.owlingo.databinding.CommunityCardBinding
+import com.example.owlingo.databinding.AnswerCardBinding
 
-class CourseAdapter(
+class AdminAllCourseAdapter(
     private val clickListener: ClickListener
-) : ListAdapter<Course, CourseAdapter.ViewHolder>(CourseDiffCallback()) {
+
+) : ListAdapter<Course, AdminAllCourseAdapter.ViewHolder>(CourseDiffCallback()) {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
@@ -32,8 +36,11 @@ class CourseAdapter(
         fun bind(item: Course) {
             binding.course = item
             binding.executePendingBindings()
-            binding.root.setOnClickListener {
-                clickListener.onClick(item)
+            binding.editBtn.setOnClickListener{
+                clickListener.onClick(item, "edit")
+            }
+            binding.delBtn.setOnClickListener{
+                clickListener.onClick(item, "del")
             }
         }
 

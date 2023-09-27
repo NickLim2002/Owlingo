@@ -7,6 +7,7 @@ import androidx.core.view.isVisible
 import androidx.databinding.BindingAdapter
 import com.example.owlingo.database.community.Comment
 import com.example.owlingo.database.community.Question
+import com.example.owlingo.database.course.Course
 
 
 class BindingUtils {
@@ -64,6 +65,31 @@ class BindingUtils {
         @JvmStatic
         fun Button.setBtnVisible(item: Comment) {
             isVisible = (item.userId === 1)
+        }
+
+        //Nick
+        @BindingAdapter("courseName")
+        @JvmStatic
+        fun TextView.setCourseName(item: Course) {
+            text = item.course_name
+        }
+
+        @BindingAdapter("courseLecture")
+        @JvmStatic
+        fun TextView.setCourseLecture(item: Course) {
+            text = item.course_lecture
+        }
+
+        @BindingAdapter("courseDetail")
+        @JvmStatic
+        fun TextView.setCourseDetail(item: Course) {
+            text = item.course_detail
+        }
+
+        @BindingAdapter("courseFee")
+        @JvmStatic
+        fun TextView.setCourseFee(item: Course) {
+            text = item.course_fee.toString()
         }
 
 

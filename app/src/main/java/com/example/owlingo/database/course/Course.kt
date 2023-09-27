@@ -14,7 +14,7 @@ data class Course(
     var course_detail: String="",
     var course_lecture: String="",
     var course_fee: Int=0,
-    val couse_schedule: String="",
+    val course_schedule: String="",
 
 
     )
